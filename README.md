@@ -1,3 +1,4 @@
+![Cover Image](https://raw.githubusercontent.com/ai03-2725/MX_V2/master/Resources/Cover.jpg) 
 # MX_V2
 Second generation KiCad Libraries of keyboard switch footprints  
 
@@ -11,24 +12,35 @@ Second generation KiCad Libraries of keyboard switch footprints
 * Topside soldermask to prevent solder overflow and improve appearance
 * Various keysizes for all occasions
 * Keysizes are generated via the script generate.py from a single footprint, making the library extensible and maintainable
+* (Will be) used for production PCBs and battle-tested in the real world
 
 ## Included Footprint Libraries
 * **MX_Solderable.pretty** - For Cherry MX type switches.
 * **MX_Hotswap.pretty** - For Cherry MX type switches via hotswap sockets.
 * **Alps_Solderable.pretty** - For alps SKCM/SKCL, SKBM/SKBL, and clones with same pin structure.  
 * **MX_Alps_Hybrid.pretty** - Hybrid MX/Alps compatible solderable footprints.
-* **Switch_Misc.pretty** - Misc footprints such as LED footprints, stabilizer-only footprints, etc.
+* **Switch_Misc.pretty** - Misc footprints such as LED footprints.
 * Template.pretty - The template footprints that the script uses to generate footprints automatically. Do not use in production.
 
-## Footprint Variants
-* -ReversedStabilizers - Reversed stabilizer direction (north- vs south-facing)
-* -NoStabilizers - No stabilizers (for plate mount stabilizer keyboard PCBs)
-* -Centered - Centered position LEDs. Use over regular types if needing center coordinates for each footprints (i.e. using PCBA).
+### Footprint Variants
+* -ReversedStabilizers - Reversed stabilizer direction (north- vs south-facing).
+
+### Misc Parts Variants
+* -LED - LEDs that align to each switch footprint. Prefix denotes which type of switch they are applicable to.
+* -Reversed - Inverts pin 1 order (left vs right square pad).
+* -PolarityMarked - Marks pin 1 with a + icon to denote positive polarity (only useful if pin 1 is the higher voltage).
 
 
 ## Contributing
-Feel free to create pull requests with more footprints. I only ask that they are of high quality, are tested on real-world PCBs, and are based on official datasheets (if exists).
+Verbal "Please create this" will usually be declined due to lack of time available for maintenance.  
+Massive overhauls that completely change the structure of the library or code will be declined if made without prior discussion.  
+When creating PRs, please verify the following:  
+* A template footprint is created in Template.pretty if creating a new family type, with the file modified to have "Template" for all script-replaced unit/variant text.  
+* Code modifications are done in a sane, clean manner.
+* Footprints are made from datasheets, empirical testing, and/or reasonable expectations.
+* All footprints in a switch library (i.e. not a one-off LED footprint or similar) are generated from the script and are not manually modified.
 
-![Schematic Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Schematic.png) 
-![Top render Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Render-Topside.png)  
-![Bottom render Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Render-Bottomside.png)  
+### Todo
+* Script: Make ISO outlines scale by unit width/height parameters
+* Add screenshots of 3D model, footprint
+* Create useful schema symbols
