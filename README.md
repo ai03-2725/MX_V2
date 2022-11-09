@@ -1,3 +1,7 @@
+# Warning
+This library is in development and has yet to be tested in production.  
+Please use at your own risk.  
+
 ![Cover Image](https://github.com/ai03-2725/MX_V2/raw/main/Resources/Cover.jpg) 
 # MX_V2
 Second generation KiCad Libraries of keyboard switch footprints  
