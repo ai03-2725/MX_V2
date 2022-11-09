@@ -241,10 +241,10 @@ class FootprintsGenerator:
                 if variant:
                     flip_multiplier = -1
                 if stabilizer_vert:
-                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {-6.985 * flip_multiplier} {stabilizer_dist_left}) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
-                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {-6.985 * flip_multiplier} {stabilizer_dist_right * -1}) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
-                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {8.255 * flip_multiplier} {stabilizer_dist_left}) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
-                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {8.255 * flip_multiplier} {stabilizer_dist_right * -1}) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
+                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {6.985 * flip_multiplier} {stabilizer_dist_left}) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
+                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {6.985 * flip_multiplier} {stabilizer_dist_right * -1}) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
+                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {-8.255 * flip_multiplier} {stabilizer_dist_left}) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
+                    footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {-8.255 * flip_multiplier} {stabilizer_dist_right * -1}) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
                 else:
                     footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {stabilizer_dist_left * -1} {-6.985 * flip_multiplier}) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
                     footprint_variant_copy.append(f'(pad "" np_thru_hole circle (at {stabilizer_dist_right} {-6.985 * flip_multiplier}) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp {uuid.uuid4()}))')
