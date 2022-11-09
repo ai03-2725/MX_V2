@@ -10,18 +10,19 @@ Second generation KiCad Libraries of keyboard switch footprints
 * Almost every switch size in existence
 * Topside soldermask to prevent solder overflow and improve appearance
 * Various keysizes for all occasions
-* Keysizes are generated via the script in 
+* Keysizes are generated via the script generate.py from a single footprint, making the library extensible and maintainable
 
-## Included Libraries
+## Included Footprint Libraries
 * **MX_Solderable.pretty** - For Cherry MX type switches.
 * **MX_Hotswap.pretty** - For Cherry MX type switches via hotswap sockets.
 * **Alps_Solderable.pretty** - For alps SKCM/SKCL, SKBM/SKBL, and clones with same pin structure.  
 * **MX_Alps_Hybrid.pretty** - Hybrid MX/Alps compatible solderable footprints.
-* **Switch_LEDs.pretty** - LED footprints for keyswitches.
+* **MX_Misc.pretty** - Misc footprints such as LED footprints, stabilizer-only footprints, etc.
 * Template.pretty - The template footprints that the script uses to generate footprints automatically. Do not use in production.
 
 ## Footprint Variants
 * -ReversedStabilizers - Reversed stabilizer direction (north- vs south-facing)
+* -NoStabilizers - No stabilizers (for plate mount stabilizer keyboard PCBs)
 * -Centered - Centered position LEDs. Use over regular types if needing center coordinates for each footprints (i.e. using PCBA).
 
 
@@ -31,4 +32,3 @@ Feel free to create pull requests with more footprints. I only ask that they are
 ![Schematic Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Schematic.png) 
 ![Top render Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Render-Topside.png)  
 ![Bottom render Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Render-Bottomside.png)  
-# MX_V2
