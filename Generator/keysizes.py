@@ -65,6 +65,10 @@ KEYSIZES_MX = [
         "stabilizer_dist": 11.938
     },
     {
+        "keysize": "ISO-Rotated",
+        "stabilizer_dist": 11.938
+    },
+    {
         "keysize": "6U-Offcenter",
         "stabilizer_dist": 57.15,
         "stabilizer_dist_right": 38.1

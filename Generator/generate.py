@@ -184,6 +184,19 @@ class FootprintsGenerator:
                 f"(fp_line (start -11.90625 19.05) (end 11.90625 19.05) (layer Dwgs.User) (width 0.15) (tstamp {uuid.uuid4()}))")
             footprint.append(
                 f"(fp_line (start -16.66875 -19.05) (end -16.66875 0) (layer Dwgs.User) (width 0.15) (tstamp {uuid.uuid4()}))")
+        elif keysize == "ISO-Rotated":
+            footprint.append(
+                f'(fp_line (start 19.05 11.90625) (end 19.05 -11.90625) (layer "Dwgs.User") (width 0.15) (tstamp {uuid.uuid4()}))')
+            footprint.append(
+                f'(fp_line (start 0 11.90625) (end 0 16.66875) (layer "Dwgs.User") (width 0.15) (tstamp {uuid.uuid4()}))')
+            footprint.append(
+                f'(fp_line (start -19.05 -11.90625) (end 19.05 -11.90625) (layer "Dwgs.User") (width 0.15) (tstamp {uuid.uuid4()}))')
+            footprint.append(
+                f'(fp_line (start -19.05 16.66875) (end -19.05 -11.90625) (layer "Dwgs.User") (width 0.15) (tstamp {uuid.uuid4()}))')
+            footprint.append(
+                f'(fp_line (start 19.05 11.90625) (end 0 11.90625) (layer "Dwgs.User") (width 0.15) (tstamp {uuid.uuid4()}))')
+            footprint.append(
+                f'(fp_line (start -19.05 16.66875) (end 0 16.66875) (layer "Dwgs.User") (width 0.15) (tstamp {uuid.uuid4()}))')
         elif keysize == "6U-Offcenter":
             footprint.append(
                 f"(fp_line (start {unit_width * -3.5} {unit_height / 2}) (end {unit_width * 2.5} {unit_height / 2}) (layer Dwgs.User) (width 0.15) (tstamp {uuid.uuid4()}))")
