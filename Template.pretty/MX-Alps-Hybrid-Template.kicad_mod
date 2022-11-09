@@ -1,4 +1,4 @@
-(footprint "MX-1U" (version 20211014) (generator pcbnew)
+(footprint "MX-Template" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
   (tedit 5A9F3A9A)
   (attr through_hole)

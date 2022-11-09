@@ -1,4 +1,4 @@
-(footprint "ALPS-1U" (version 20211014) (generator pcbnew)
+(footprint "ALPS-Template" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
   (tedit 5CF31DEF)
   (attr through_hole)
