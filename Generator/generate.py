@@ -142,7 +142,7 @@ class FootprintsGenerator:
                 save_path = output_dir / \
                     f"{family_name}-{key_variant_name}.kicad_mod"
 
-                output_data = encoded_footprint.encoded_footprint.replace("UnitSize", key_variant_name)
+                output_data = encoded_footprint.encoded_footprint.replace("Template", key_variant_name)
                 
                 with save_path.open(mode='w') as save_file:
                     save_file.write(output_data)
