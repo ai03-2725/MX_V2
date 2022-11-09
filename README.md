@@ -1,4 +1,4 @@
-![Cover Image](https://raw.githubusercontent.com/ai03-2725/MX_V2/master/Resources/Cover.jpg) 
+![Cover Image](https://github.com/ai03-2725/MX_V2/raw/main/Resources/Cover.jpg) 
 # MX_V2
 Second generation KiCad Libraries of keyboard switch footprints  
 
