@@ -105,7 +105,7 @@ class FootprintEncoder:
 
 class FootprintsGenerator:
 
-    def __init__(self, input_file, output_dir, keysizes_type, unit_width, unit_height, debug):
+    def __init__(self, input_file, output_dir, keysizes_type, family_name, unit_width, unit_height, debug):
         self.debug = debug
 
         # Choose which unit sizes to generate
@@ -135,10 +135,17 @@ class FootprintsGenerator:
             for final_footprint in final_footprints:
                 encoded_footprint = FootprintEncoder(
                     footprint=final_footprint['footprint'], debug=self.debug)
+                keysize_human_readable = keysize_def.get('keysize')
+                if isinstance(keysize_def.get('keysize'), (int, float)):
+                    keysize_human_readable = f"{keysize_def.get('keysize')}U"
+                key_variant_name = f"{keysize_human_readable}{final_footprint['variant_name'] or ''}"
                 save_path = output_dir / \
-                    f"{input_file.name}-{keysize_def.get('keysize')}{final_footprint['variant_name'] or ''}.kicad_mod"
+                    f"{family_name}-{key_variant_name}.kicad_mod"
+
+                output_data = encoded_footprint.encoded_footprint.replace("UnitSize", key_variant_name)
+                
                 with save_path.open(mode='w') as save_file:
-                    save_file.write(encoded_footprint.encoded_footprint)
+                    save_file.write(output_data)
                     save_file.close()
 
     def parse_input(self, input_file):
@@ -162,7 +169,7 @@ class FootprintsGenerator:
     def generate_footprint_outlines(self, base_footprint, keysize_def, unit_width, unit_height):
         # (fp_line (start -66.675 -9.525) (end 66.675 -9.525) (layer Dwgs.User) (width 0.15) (tstamp 4de36ae6-8d67-4c45-bd5c-19be16f828ed))
         keysize = keysize_def.get('keysize')
-        footprint = base_footprint
+        footprint = base_footprint[:]
         if keysize == "ISO":
             # TODO: Scale ISO based on unit size
             footprint.append(
@@ -217,7 +224,7 @@ class FootprintsGenerator:
 
         if not keysize_def.get("stabilizer_dist"):
             return [{
-                "footprint": base_footprint,
+                "footprint": base_footprint[:],
                 "variant_name": None
             }]
 
@@ -229,7 +236,7 @@ class FootprintsGenerator:
 
         if keysizes_type == "mx" or keysizes_type == "mx_alps":
             for variant in [None, "-ReversedStabilizers"]:
-                footprint_variant_copy = base_footprint
+                footprint_variant_copy = base_footprint[:]
                 flip_multiplier = 1
                 if variant:
                     flip_multiplier = -1
@@ -250,7 +257,7 @@ class FootprintsGenerator:
                 })
         else:
             ret_list = [{
-                "footprint": base_footprint,
+                "footprint": base_footprint[:],
                 "variant_name": None
             }]
         
@@ -279,6 +286,10 @@ if __name__ == '__main__':
   - mx_alps: Generate hybrid MX/alps sizes"""
     arg_parser.add_argument("-t", "--keysizes-type", dest="keysizes_type",
                             help=description_keysizes_type, choices=["mx", "alps", "mx_alps"], required=True)
+
+    description_family_name = "Specify the output footprint family name (i.e. the MX-Hotswap part of MX-Hotswap-1U.pretty)."
+    arg_parser.add_argument(
+        "-n", "--family-name", dest="family_name", help=description_family_name, required=True)
 
 #     description_stabilizer_type = """Choose the stabilizer type that gets generated.
 #   - mx: Generates standard MX stabilizers, their reversed variants (north/south-facing), and no-stabilizer variants.
@@ -316,5 +327,5 @@ if __name__ == '__main__':
 
     # Launch generator
 
-    footprints_generator = FootprintsGenerator(input_file=input_file, output_dir=output_dir, keysizes_type=args.keysizes_type,
+    footprints_generator = FootprintsGenerator(input_file=input_file, output_dir=output_dir, keysizes_type=args.keysizes_type, family_name=args.family_name,
                                                unit_width=args.unit_width, unit_height=args.unit_height, debug=args.debug)

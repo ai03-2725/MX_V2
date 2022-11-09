@@ -91,6 +91,6 @@ KEYSIZES_ALPS = [
     {"keysize": "ISO"}
 ]
 
-KEYSIZES_MX_ALPS = KEYSIZES_MX.extend([
+KEYSIZES_MX_ALPS = KEYSIZES_MX[:].extend([
     {"keysize": 6.5},
 ])

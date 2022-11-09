@@ -1,4 +1,4 @@
-(footprint "MX-Hotswap" (version 20211014) (generator pcbnew)
+(footprint "MX-Hotswap-UnitSize" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
   (tedit 60F271EF)
   (attr smd)
