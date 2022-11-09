@@ -17,7 +17,7 @@ Second generation KiCad Libraries of keyboard switch footprints
 * **MX_Hotswap.pretty** - For Cherry MX type switches via hotswap sockets.
 * **Alps_Solderable.pretty** - For alps SKCM/SKCL, SKBM/SKBL, and clones with same pin structure.  
 * **MX_Alps_Hybrid.pretty** - Hybrid MX/Alps compatible solderable footprints.
-* **MX_Misc.pretty** - Misc footprints such as LED footprints, stabilizer-only footprints, etc.
+* **Switch_Misc.pretty** - Misc footprints such as LED footprints, stabilizer-only footprints, etc.
 * Template.pretty - The template footprints that the script uses to generate footprints automatically. Do not use in production.
 
 ## Footprint Variants
