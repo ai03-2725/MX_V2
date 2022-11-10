@@ -48,3 +48,7 @@ When creating PRs, please verify the following:
 * Script: Make ISO outlines scale by unit width/height parameters
 * Add screenshots of 3D model, footprint
 * Create useful schema symbols
+
+
+## Credits
+* All authors and contributors to the [original V1 switch library](https://github.com/ai03-2725/MX_Alps_Hybrid)
