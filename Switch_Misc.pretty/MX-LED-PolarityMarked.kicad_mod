@@ -20,6 +20,6 @@
   (fp_line (start -7 5) (end -7 7) (layer "Dwgs.User") (width 0.15) (tstamp 565f1b41-9ff0-4ace-bd07-3ba371def360))
   (fp_line (start -5 -7) (end -7 -7) (layer "Dwgs.User") (width 0.15) (tstamp aa628361-1ec0-42c2-8cf9-5a3b6c2ff197))
   (fp_line (start 5 -7) (end 7 -7) (layer "Dwgs.User") (width 0.15) (tstamp f62daedf-f091-4506-9559-5ce05853fe18))
-  (pad "1" thru_hole rect (at -1.27 5.08) (size 1.905 1.905) (drill 1.04) (layers *.Cu *.Mask) (tstamp aaf07173-0931-4f00-8938-0c8a396e3cca))
-  (pad "2" thru_hole circle (at 1.27 5.08) (size 1.905 1.905) (drill 1.04) (layers *.Cu *.Mask) (tstamp a8ba7784-c951-4f75-a800-6f765a624229))
+  (pad "1" thru_hole rect (at -1.27 5.08) (size 1.905 1.905) (drill 1.04) (layers *.Cu "B.Mask") (tstamp aaf07173-0931-4f00-8938-0c8a396e3cca))
+  (pad "2" thru_hole circle (at 1.27 5.08) (size 1.905 1.905) (drill 1.04) (layers *.Cu "B.Mask") (tstamp a8ba7784-c951-4f75-a800-6f765a624229))
 )
