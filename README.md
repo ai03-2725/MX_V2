@@ -46,6 +46,8 @@ When creating PRs, please verify the following:
 
 ### Todo
 * Script: Make ISO outlines scale by unit width/height parameters
+* Add 3D models of sockets to hotswap footprints
+  * Make a 3D model of a socket to begin with
 * Add screenshots of 3D model, footprint
 * Create useful schema symbols
 

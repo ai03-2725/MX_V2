@@ -1,11 +1,16 @@
 # Schema
-# { 
-#     "keysize": unit or string ID (string IDs must be handled via custom code; numerical units will be auto-calculated),
-#     "stabilizer_dist": X distance of one of the stabilizer holes (or leftside if stabilizer_dist_right is defined),
-#     "stabilizer_dist_right": X distance of the right stabilizer holes,
-#     "stabilizer_vert": Whether or not to rotate the stabilizers vertically
-# }
+# [
+#     { 
+#         "keysize": unit or string ID (string IDs must be handled via custom code; numerical units will be auto-calculated),
+#         "stabilizer_dist": X distance of one of the stabilizer holes from the switch center (or leftside if stabilizer_dist_right is defined),
+#         "stabilizer_dist_right": X distance of the right stabilizer holes from the switch center (for asymmetrical stabilizers),
+#         "stabilizer_vert": Whether or not to rotate the stabilizers vertically
+#     },
+#     ...
+# ]
 
+
+# Simple MX
 KEYSIZES_MX = [
     {
         "keysize": 1
@@ -80,6 +85,8 @@ KEYSIZES_MX = [
     }
 ]
 
+
+# Alps (with plate-mount stabilizers)
 KEYSIZES_ALPS = [
     {"keysize": 1},
     {"keysize": 1.25},
@@ -95,6 +102,64 @@ KEYSIZES_ALPS = [
     {"keysize": "ISO"}
 ]
 
+
+# MX/Alps Hybrid
 KEYSIZES_MX_ALPS = KEYSIZES_MX[:] + [
     {"keysize": 6.5}
 ]
+
+
+# Alps with MX stabilizers where supported (DCS and similar)
+KEYSIZES_ALPS_MX_STABILIZERS = [
+    {
+        "keysize": 1
+    },
+    {
+        "keysize": 1.25
+    },
+    {
+        "keysize": 1.5
+    },
+    {
+        "keysize": 1.75
+    },
+    {
+        "keysize": 2,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": 2.25,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": 2.75,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": 6.25,
+        "stabilizer_dist": 50
+    },
+    {
+        "keysize": 6.5
+    },
+    {
+        "keysize": 7,
+        "stabilizer_dist": 57.15
+    },
+    {
+        "keysize": "ISO",
+        "stabilizer_vert": True,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": "ISO-Rotated",
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": "2U-Vertical",
+        "stabilizer_vert": True,
+        "stabilizer_dist": 11.938
+    }
+]
+
+

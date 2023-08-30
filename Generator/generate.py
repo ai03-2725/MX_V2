@@ -113,6 +113,8 @@ class FootprintsGenerator:
             self.keysizes = keysizes.KEYSIZES_MX
         elif keysizes_type == "alps":
             self.keysizes = keysizes.KEYSIZES_ALPS
+        elif keysizes_type == "alps_mx_stabilizers":
+            self.keysizes = keysizes.KEYSIZES_ALPS_MX_STABILIZERS
         else:  # mx_alps
             self.keysizes = keysizes.KEYSIZES_MX_ALPS
 
@@ -247,7 +249,7 @@ class FootprintsGenerator:
 
         ret_list = []
 
-        if keysizes_type == "mx" or keysizes_type == "mx_alps":
+        if keysizes_type in ["mx", "mx_alps", "alps_mx_stabilizers"]:
             for variant in [None, "-ReversedStabilizers"]:
                 footprint_variant_copy = base_footprint[:]
                 flip_multiplier = 1
@@ -296,9 +298,10 @@ if __name__ == '__main__':
     description_keysizes_type = """Choose the key sizes type that gets generated.
   - mx: Generate standard MX sizes
   - alps: Generate standard alps keysizes (such as 6.5U AEK space)
-  - mx_alps: Generate hybrid MX/alps sizes"""
+  - mx_alps: Generate hybrid MX/alps sizes
+  - alps_mx_stabilizers: Generate alps keysizes with MX PCB-mount stabilizers (for DCS and similar)"""
     arg_parser.add_argument("-t", "--keysizes-type", dest="keysizes_type",
-                            help=description_keysizes_type, choices=["mx", "alps", "mx_alps"], required=True)
+                            help=description_keysizes_type, choices=["mx", "alps", "mx_alps", "alps_mx_stabilizers"], required=True)
 
     description_family_name = "Specify the output footprint family name (i.e. the MX-Hotswap part of MX-Hotswap-1U.pretty)."
     arg_parser.add_argument(
