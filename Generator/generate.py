@@ -115,6 +115,8 @@ class FootprintsGenerator:
             self.keysizes = keysizes.KEYSIZES_ALPS
         elif keysizes_type == "alps_mx_stabilizers":
             self.keysizes = keysizes.KEYSIZES_ALPS_MX_STABILIZERS
+        elif keysizes_type == "gateron_ks33":
+            self.keysizes = keysizes.KEYSIZES_GATERON_KS33
         else:  # mx_alps
             self.keysizes = keysizes.KEYSIZES_MX_ALPS
 
@@ -270,6 +272,12 @@ class FootprintsGenerator:
                     "footprint": footprint_variant_copy,
                     "variant_name": variant
                 })
+        elif keysizes_type in [""]:
+            # TODO: Generate plate-mount stabilizer keepout zones for KS-33 footprint types
+            ret_list = [{
+                "footprint": base_footprint[:],
+                "variant_name": None
+            }]
         else:
             ret_list = [{
                 "footprint": base_footprint[:],
@@ -299,9 +307,10 @@ if __name__ == '__main__':
   - mx: Generate standard MX sizes
   - alps: Generate standard alps keysizes (such as 6.5U AEK space)
   - mx_alps: Generate hybrid MX/alps sizes
-  - alps_mx_stabilizers: Generate alps keysizes with MX PCB-mount stabilizers (for DCS and similar)"""
+  - alps_mx_stabilizers: Generate alps keysizes with MX PCB-mount stabilizers (for DCS and similar)
+  - gateron_ks33: Generate gateron KS-33 (low-profile v2.0) sizes"""
     arg_parser.add_argument("-t", "--keysizes-type", dest="keysizes_type",
-                            help=description_keysizes_type, choices=["mx", "alps", "mx_alps", "alps_mx_stabilizers"], required=True)
+                            help=description_keysizes_type, choices=["mx", "alps", "mx_alps", "alps_mx_stabilizers", "gateron_ks33"], required=True)
 
     description_family_name = "Specify the output footprint family name (i.e. the MX-Hotswap part of MX-Hotswap-1U.pretty)."
     arg_parser.add_argument(

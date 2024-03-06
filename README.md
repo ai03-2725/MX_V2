@@ -1,13 +1,11 @@
-# Warning
-This library is in development and has yet to be tested in production.  
-Please use at your own risk.  
-
 ![Cover Image](https://github.com/ai03-2725/MX_V2/raw/main/Resources/Cover.jpg) 
 # MX_V2
 Second generation KiCad Libraries of keyboard switch footprints  
-
+  
+  
 <!-- ![Footprint Image](https://raw.githubusercontent.com/ai03-2725/MX_Alps_Hybrid.pretty/master/Screenshots/Footprint.png)   -->
-6 years after the creation of [the original MX_Alps_Hybrid library](https://github.com/ai03-2725/MX_Alps_Hybrid), this library has been created as a successor and replacement.
+Designed as the successor to [the original MX_Alps_Hybrid library](https://github.com/ai03-2725/MX_Alps_Hybrid), with significantly improved sustainability and modularity.  
+Unlike the original monolithic library, this new library separates switch types and components (LEDs and similar) as much as possible for simpler schematics, and is intended to be used with default KiCad symbols (such as `SW_Push`).
 
 
 ## Features
@@ -16,13 +14,15 @@ Second generation KiCad Libraries of keyboard switch footprints
 * Topside soldermask to prevent solder overflow and improve appearance
 * Various keysizes for all occasions
 * Keysizes are generated via the script generate.py from a single footprint, making the library extensible and maintainable
-* (Will be) used for production PCBs and battle-tested in the real world
+* Intended for production use
 
 ## Included Footprint Libraries
-* **MX_Solderable.pretty** - For Cherry MX type switches.
+* **MX_Solderable.pretty** - For Cherry MX type switches via soldered pads.
 * **MX_Hotswap.pretty** - For Cherry MX type switches via hotswap sockets.
 * **Alps_Solderable.pretty** - For alps SKCM/SKCL, SKBM/SKBL, and clones with same pin structure.  
 * **MX_Alps_Hybrid.pretty** - Hybrid MX/Alps compatible solderable footprints.
+* **Gateron_KS33_Solderable.pretty** - For Gateron Low Profile (V1.0 or V2.0, KS-27 or KS-33) switches via soldered pads.
+* **Gateron_KS33_Hotswap.pretty** - For Gateron Low Profile (V1.0 or V2.0, KS-27 or KS-33) switches via hotswap sockets.
 * **Switch_Misc.pretty** - Misc footprints such as LED footprints.
 * Template.pretty - The template footprints that the script uses to generate footprints automatically. Do not use in production.
 
@@ -45,11 +45,14 @@ When creating PRs, please verify the following:
 * All footprints in a switch library (i.e. not a one-off LED footprint or similar) are generated from the script and are not manually modified.
 
 ### Todo
-* Script: Make ISO outlines scale by unit width/height parameters
-* Add 3D models of sockets to hotswap footprints
-  * Make a 3D model of a socket to begin with
-* Add screenshots of 3D model, footprint
-* Create useful schema symbols
+* Script todos
+  * Make ISO outlines scale by unit width/height parameters
+  * Add stabilizer clearance keepout zones for Gateron KS33 footprints
+* Footprint todos
+  * Create 3D models of MX hotswap sockets and include them in the footprints
+* Ease of use
+  * Add screenshots of 3D model, footprint
+
 
 
 ## Credits

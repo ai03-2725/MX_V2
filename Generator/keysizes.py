@@ -163,3 +163,30 @@ KEYSIZES_ALPS_MX_STABILIZERS = [
 ]
 
 
+# Gateron KS-33 
+KEYSIZES_GATERON_KS33 = [
+    {"keysize": 1},
+    {"keysize": 1.25},
+    {"keysize": 1.5},
+    {"keysize": 1.75},
+    {
+        "keysize": 2,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": 2.25,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": 2.75,
+        "stabilizer_dist": 11.938
+    },
+    {
+        "keysize": 6.25,
+        "stabilizer_dist": 50
+    },
+    {
+        "keysize": 7,
+        "stabilizer_dist": 57.15
+    },
+]
