@@ -159,7 +159,7 @@ class FootprintsGenerator:
         input_file_opened = input_file.open()
 
         # Read and convert to single line
-        input_string = input_file_opened.read().replace('\n', ' ').replace('\r', ' ')
+        input_string = input_file_opened.read().replace('\n', ' ').replace('\r', ' ').replace('\t', ' ')
 
         # Use FootprintParser to convert to a tokenized list
         footprint_elements = FootprintParser(

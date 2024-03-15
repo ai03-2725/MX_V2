@@ -43,13 +43,13 @@ When creating PRs, please verify the following:
 * Code modifications are done in a sane, clean manner.
 * Footprints are made from datasheets, empirical testing, and/or reasonable expectations.
 * All footprints in a switch library (i.e. not a one-off LED footprint or similar) are generated from the script and are not manually modified.
+* Once everything is tested functional, add the line to generate the library folder for the footprint family automatically in `Generator/generate-all.sh`.
+
 
 ### Todo
 * Script todos
   * Make ISO outlines scale by unit width/height parameters
   * Add stabilizer clearance keepout zones for Gateron KS33 footprints
-* Footprint todos
-  * Create 3D models of MX hotswap sockets and include them in the footprints
 * Ease of use
   * Add screenshots of 3D model, footprint
 
