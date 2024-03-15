@@ -496,29 +496,7 @@
 			"f7c7c391-c857-4f41-9da4-fbc0759b3b75" "ff8e2389-1631-469f-8f58-39dc87631f7e"
 		)
 	)
-	(model "${KIPRJMOD}/../libs/MX_V2/3D/Gateron-KS33-Socket.step"
-		(offset
-			(xyz 5.025 -7.925 -3.5)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -90 0 180)
-		)
-	)
-	(model "${KIPRJMOD}/libs/MX_V2/3D/Gateron-KS33-Socket.step"
-		(offset
-			(xyz 5.025 -7.925 -3.5)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -90 0 180)
-		)
-	)
-	(model "${KIPRJMOD}/MX_V2/3D/Gateron-KS33-Socket.step"
+	(model "./Gateron-KS33-Socket.step"
 		(offset
 			(xyz 5.025 -7.925 -3.5)
 		)

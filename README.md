@@ -35,6 +35,11 @@ Unlike the original monolithic library, this new library separates switch types 
 * -PolarityMarked - Marks pin 1 with a + icon to denote positive polarity (only useful if pin 1 is the higher voltage).
 
 
+### 3D Model Troubleshooting
+Due to limitations in KiCad, there is no particularly elegant way to handle 3D models for non-plugin third-party libraries.  
+If you have issues seeing the 3D models or exporting them in STEP files, copy the contents of the `3D` directory to your project's root folder alongside the kicad project files.  
+
+
 ## Contributing
 Verbal "Please create this" will usually be declined due to lack of time available for maintenance.  
 Massive overhauls that completely change the structure of the library or code will be declined if made without prior discussion.  
