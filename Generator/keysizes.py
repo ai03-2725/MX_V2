@@ -163,7 +163,7 @@ KEYSIZES_ALPS_MX_STABILIZERS = [
 ]
 
 
-# Gateron KS-33 
+# Gateron KS-33 (Low Profile 2.0)
 KEYSIZES_GATERON_KS33 = [
     {"keysize": 1},
     {"keysize": 1.25},
@@ -190,3 +190,8 @@ KEYSIZES_GATERON_KS33 = [
         "stabilizer_dist": 57.15
     },
 ]
+
+
+# Kailh PG1353 (Choc V2)
+# For now, just use the Gateron KS33 sizes unless they start to differ in support
+KEYSIZES_KAILH_PG1353 = KEYSIZES_GATERON_KS33

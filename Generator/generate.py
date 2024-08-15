@@ -117,6 +117,8 @@ class FootprintsGenerator:
             self.keysizes = keysizes.KEYSIZES_ALPS_MX_STABILIZERS
         elif keysizes_type == "gateron_ks33":
             self.keysizes = keysizes.KEYSIZES_GATERON_KS33
+        elif keysizes_type == "kailh_pg1353":
+            self.keysizes = keysizes.KEYSIZES_KAILH_PG1353
         else:  # mx_alps
             self.keysizes = keysizes.KEYSIZES_MX_ALPS
 
@@ -308,9 +310,10 @@ if __name__ == '__main__':
   - alps: Generate standard alps keysizes (such as 6.5U AEK space)
   - mx_alps: Generate hybrid MX/alps sizes
   - alps_mx_stabilizers: Generate alps keysizes with MX PCB-mount stabilizers (for DCS and similar)
-  - gateron_ks33: Generate gateron KS-33 (low-profile v2.0) sizes"""
+  - gateron_ks33: Generate gateron KS-33 (low-profile v2.0) sizes
+  - kailh_pg1353: Generate kailh PG1353 (choc V2) sizes"""
     arg_parser.add_argument("-t", "--keysizes-type", dest="keysizes_type",
-                            help=description_keysizes_type, choices=["mx", "alps", "mx_alps", "alps_mx_stabilizers", "gateron_ks33"], required=True)
+                            help=description_keysizes_type, choices=["mx", "alps", "mx_alps", "alps_mx_stabilizers", "gateron_ks33", "kailh_pg1353"], required=True)
 
     description_family_name = "Specify the output footprint family name (i.e. the MX-Hotswap part of MX-Hotswap-1U.pretty)."
     arg_parser.add_argument(

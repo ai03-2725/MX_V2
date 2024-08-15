@@ -23,6 +23,8 @@ Unlike the original monolithic library, this new library separates switch types 
 * **MX_Alps_Hybrid.pretty** - Hybrid MX/Alps compatible solderable footprints.
 * **Gateron_KS33_Solderable.pretty** - For Gateron Low Profile (V1.0 or V2.0, KS-27 or KS-33) switches via soldered pads.
 * **Gateron_KS33_Hotswap.pretty** - For Gateron Low Profile (V1.0 or V2.0, KS-27 or KS-33) switches via hotswap sockets.
+* **Kailh_PG1353_Solderable.pretty** - For Kailh Choc V2 (PG1353 series) switches via soldered pads.
+* **Kailh_PG1353_Hotswap.pretty** - For Kailh Choc V2 (PG1353 series) switches via hotswap sockets.
 * **Switch_Misc.pretty** - Misc footprints such as LED footprints.
 * Template.pretty - The template footprints that the script uses to generate footprints automatically. Do not use in production.
 
