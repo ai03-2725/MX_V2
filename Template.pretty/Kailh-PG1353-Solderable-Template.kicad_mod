@@ -4,7 +4,7 @@
 	(generator_version "8.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -3.5 0)
+		(at 0 3.75 0)
 		(layer "Dwgs.User")
 		(uuid "f2671b1c-b5fd-4cc1-b48c-165d1fbd5387")
 		(effects
@@ -15,7 +15,7 @@
 		)
 	)
 	(property "Value" "Template"
-		(at 0 -7.9375 0)
+		(at 0 6 0)
 		(layer "Dwgs.User")
 		(uuid "7e9b4421-fc58-4b81-a584-7f6858b3211f")
 		(effects
