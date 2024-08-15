@@ -7,6 +7,13 @@ Second generation KiCad Libraries of keyboard switch footprints
 Designed as the successor to [the original MX_Alps_Hybrid library](https://github.com/ai03-2725/MX_Alps_Hybrid), with significantly improved sustainability and modularity.  
 Unlike the original monolithic library, this new library separates switch types and components (LEDs and similar) as much as possible for simpler schematics, and is intended to be used with default KiCad symbols (such as `SW_Push`).
 
+## Breaking Changes Notice (Commit 6e5adad, 2024-08-15)
+**All hotswap footprints have been modified so the component side (socket side) is topside.**  
+This resolves issues with position file output and 3D model positioning on non-1.6mm 3D model exports.  
+  
+- **If you are migrating from a previous version and using hotswap footprints,** make sure you **flip all switch footprints so the socket side matches the previous versions.**  
+- **If you are starting a fresh project using hotswap footprints,** make sure you **flip all switch footprint so the socket/pad side is on the bottom.**
+
 
 ## Features
 * Designed from scratch using official datasheets and accurate measurements
